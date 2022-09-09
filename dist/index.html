@@ -9,17 +9,17 @@
 </head>
 <body>
     <script id="ingredients" type="text/x-handlebars-template">
-        {{#each recipe}}
+        {{#each data}}
         <div id="recipe">
-        <h2 class="text" id="name"><a href="{{recipe.href}}">{{recipe.title}}</a></h2>
-        <img src="{{recipe.thumbnail}}" >
+        <h2 class="text" id="name"><a href="{{href}}">{{title}}</a></h2>
+        <img id="image" src="{{thumbnail}}">
         <p class="text">ingredients</p>
-         {{#each recipe.ingredients}}
-            
-               <ul>
-                <li>{{recipe.ingredients}}</li>
-               </ul>
+         <ul>
+            {{#each ingredients}}
+            <li>{{this}}</li>
             {{/each}}
+        </ul>
+            
         </div>
         {{/each}}
         </script>

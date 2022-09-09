@@ -4,7 +4,7 @@ class Renderer{
         $(".main").empty();
         const src = $("#ingredients").html();
         const template = Handlebars.compile(src);
-        let someHtml = template({ recipe: data });
+        let someHtml = template({ data }); // {data : data ([])}
         $(".main").append(someHtml);
     }
     
